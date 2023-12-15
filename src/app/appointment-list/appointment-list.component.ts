@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppointmentListComponent {
 
+  //List of appointments
+  appointments: string[]  = ["a", "b", "c", "d"]; 
+
 }
