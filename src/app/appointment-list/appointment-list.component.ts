@@ -13,6 +13,13 @@ export class AppointmentListComponent {
   newAppointmentTitle: string = "";
   newAppointmentDate: Date = new Date();
 
+  addAppointment(){
+    console.log("INFO: Entered addAppointment method in AppointmentListComponent class");
+
+    alert(this.newAppointmentTitle + " " + this.newAppointmentDate);
+
+  }
+
 
 
   //List of appointments
