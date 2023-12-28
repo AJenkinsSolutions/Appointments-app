@@ -1,9 +1,30 @@
 <main>
-    <p>appointment-list works!</p>
+    <p>Appointment-list Component Works</p>
 
+    <!-- two way data binding, Lets us get the User input and use in it in our type script -->
    <input [(ngModel)]="newAppointmentTitle" type="text" placeholder="Appointment Title">
    <input [(ngModel)]="newAppointmentDate" type="date" placeholder="Appointment Date">
+    <!-- Event Binding invokes the addAppointment method in the typescript -->
    <button (click)="addAppointment()">add</button>
+
+    <!-- Property Binidng: Using our boolean Variable from our TS  -->
+    <div *ngIf="clicked">
+        <!-- Iteraing through our Appoinments List in the Ts  -->
+       <div *ngFor="let i of appointmentsList; index as j">
+
+            <!-- Unordered List to for our iteration -->
+            <ul>
+                <li>Title: {{i.title}}</li>
+                <li>Date: {{i.date | date: 'dd.MM.yyyy'}}</li>
+                <button (click)="deleteAppointment(j)">Delete</button>
+            </ul>
+    
+        </div>
+    
+    </div>
+
+   
+
 
 </main>
 
